@@ -1,0 +1,112 @@
+# Revive Trends
+
+**Revive Trends** es una aplicación web estilo **Vinted**, pensada para Argentina. Permite a los usuarios comprar y vender productos de **indumentaria, electrónica y bazar**.
+
+Actualmente este repo contiene el **frontend en React + Tailwind**, listo para desplegar en **Vercel**. 🚀
+
+---
+
+## 📦 package.json
+Copia este contenido en tu `package.json`:
+
+```json
+{
+  "name": "revive-trends",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.9"
+  }
+}
+```
+
+---
+
+## 🛠 Instalación y ejecución local
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/tuusuario/revive-trends.git
+   cd revive-trends
+   ```
+
+2. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Configurar Tailwind:
+   - Crear `tailwind.config.js` con:
+     ```js
+     export default {
+       content: ["./index.html", "./src/**/*.{js,jsx}"],
+       theme: { extend: {} },
+       plugins: [],
+     }
+     ```
+   - Crear `postcss.config.js` con:
+     ```js
+     export default {
+       plugins: {
+         tailwindcss: {},
+         autoprefixer: {},
+       },
+     }
+     ```
+   - En `src/index.css`:
+     ```css
+     @tailwind base;
+     @tailwind components;
+     @tailwind utilities;
+     ```
+
+4. Levantar en local:
+   ```bash
+   npm run dev
+   ```
+
+La app estará en [http://localhost:5173](http://localhost:5173).
+
+---
+
+## 🚀 Despliegue en Vercel
+
+1. Subí el repo a GitHub.
+2. Entrá a [vercel.com](https://vercel.com/) y conectá el repo.
+3. Vercel detectará automáticamente que es un proyecto **Vite + React**.
+4. Deploy y listo 🎉.
+
+---
+
+## ✅ Checklist de próximos pasos
+
+Para que quede igual a Vinted en funcionalidades:
+- [ ] **Autenticación** con redes sociales (NextAuth/Auth0).
+- [ ] **Pagos** con **MercadoPago** (checkout + webhooks).
+- [ ] **Logística** con Mercado Envíos / Andreani / Correo Argentino.
+- [ ] **Subida de imágenes** (Cloudinary, AWS S3 o Backblaze).
+- [ ] **Chat entre usuarios** (WebSockets o Firebase).
+- [ ] **Backend** (Node + Express o Next.js API Routes) con base de datos (Postgres/Firebase).
+
+---
+
+## 👨‍💻 Créditos
+
+Plantilla creada para el proyecto **Revive Trends** (2025).
+
+---
+
+👉 Ahora ya podés clonar, instalar y desplegar la app en Vercel. El frontend está listo para que modifiques colores, textos y estilos. Cuando quieras, seguimos con el **backend mínimo** para usuarios, productos y órdenes.
